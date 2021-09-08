@@ -1,0 +1,75 @@
+.item {
+  max-width: 500px;
+  margin-bottom: 10px;
+  
+  > .row {
+    display: flex;
+    border: 5px solid #99a;
+    background-color: #dde;
+    
+    .app-link {
+      margin: auto 0 auto 10px;
+      font-size: 1.2em;
+      color: #333;
+
+      &:visited {
+        color: #777;
+      }
+    }
+    
+    .repo-link {
+      margin: 5px 10px 5px auto;
+      height: 40px;
+      
+      img {
+        height: 40px;
+      }
+    }
+    
+    .expander {
+      width: 25px;
+      cursor: pointer;
+    
+      &::after {
+        content: '';
+        display: inline-block;
+        margin-left: 5px;
+        padding: 3px;
+        width: 0.1px;
+        border: solid black;
+        border-width: 0 3px 3px 0;
+      }
+    }
+  }
+
+  &.collapsed {
+    > .row {
+      border-radius: 8px;
+
+      .expander::after {
+        margin-top: 18px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+      }
+    }
+  }
+
+  &.expanded {
+    > .row {
+      border-radius: 8px 8px 0 0;
+
+      .expander::after {
+        margin-top: 22px;
+        transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+      }
+    }
+
+    > .description {
+      padding: 8px;
+      background-color: #e5e5f5;
+      border: solid #99a;
+      border-width: 0 2px 2px 2px;
+    }
+  }
+}

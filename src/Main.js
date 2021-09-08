@@ -1,25 +1,33 @@
-import './Main.css';
+import './Main.scss';
 import Item from './Item';
 
 function Main() {
   const items = [
     {
-      description: 'Northwind Express API',
+      title: 'Northwind Express API',
+      description: `A RESTful API, implemented in Node.js using Express, providing CRUD functionality for managing employee details in a
+      PostgreSQL database.`,
       appUrl: 'https://northwind-express-api.herokuapp.com/swagger',
       repoUrl: 'https://github.com/bhaeussermann/northwind-api'
     },
     {
-      description: 'Angular Northwind App',
+      title: 'Angular Northwind App',
+      description: `A simple CRUD application for managing employee details in a standard Northwind database. It is implemented using Angular
+      and the Angular Material UI component library.`,
       appUrl: 'https://angular-northwind.herokuapp.com',
       repoUrl: 'https://github.com/bhaeussermann/AngularNorthwind'
     },
     {
-      description: 'Vue Northwind App (Buefy)',
+      title: 'Vue Northwind App (Buefy)',
+      description: `A simple CRUD application for managing employee details in a standard Northwind database. It is implemented using Vue.js
+      and the Buefy UI component library.`,
       appUrl: 'https://vue-northwind-buefy.herokuapp.com',
       repoUrl: 'https://github.com/bhaeussermann/VueNorthwind'
     },
     {
-      description: 'Vue Northwind App (Vuetify)',
+      title: 'Vue Northwind App (Vuetify)',
+      description: `A simple CRUD application for managing employee details in a standard Northwind database. It is implemented using Vue.js
+      and the Vuetify UI component library.`,
       appUrl: 'https://vue-northwind-vuetify.herokuapp.com',
       repoUrl: 'https://github.com/bhaeussermann/VueNorthwind/tree/vuetify'
     }
