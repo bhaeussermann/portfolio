@@ -2,41 +2,11 @@ import { useState } from 'react';
 import './Main.scss';
 import Item from './Item';
 
-const itemInfos = [
-  {
-    title: 'Northwind Express API',
-    description: `A RESTful API, implemented in Node.js using Express, providing CRUD functionality for managing employee details in a
-    PostgreSQL database.`,
-    appUrl: 'https://northwind-express-api.herokuapp.com/swagger',
-    repoUrl: 'https://github.com/bhaeussermann/northwind-api'
-  },
-  {
-    title: 'Angular Northwind App',
-    description: `A simple CRUD application for managing employee details in a standard Northwind database. It is implemented using Angular
-    and the Angular Material UI component library.`,
-    appUrl: 'https://angular-northwind.herokuapp.com',
-    repoUrl: 'https://github.com/bhaeussermann/AngularNorthwind'
-  },
-  {
-    title: 'Vue Northwind App (Buefy)',
-    description: `A simple CRUD application for managing employee details in a standard Northwind database. It is implemented using Vue.js
-    and the Buefy UI component library.`,
-    appUrl: 'https://vue-northwind-buefy.herokuapp.com',
-    repoUrl: 'https://github.com/bhaeussermann/VueNorthwind'
-  },
-  {
-    title: 'Vue Northwind App (Vuetify)',
-    description: `A simple CRUD application for managing employee details in a standard Northwind database. It is implemented using Vue.js
-    and the Vuetify UI component library.`,
-    appUrl: 'https://vue-northwind-vuetify.herokuapp.com',
-    repoUrl: 'https://github.com/bhaeussermann/VueNorthwind/tree/vuetify'
-  }
-];
+let outerSetItems = null;
 
-const initialItems = itemInfos.map(info => ({ info, expanded: false }));
-
-function Main() {
-  const [items, setItems] = useState(initialItems);
+export default function Main() {
+  const [items, setItems] = useState([]);
+  outerSetItems = setItems;
 
   const setExpanded = (itemIndex, newExpanded) => {
     setItems(items.map((item, index) => ({ ...item, expanded: (index === itemIndex) && newExpanded })));
@@ -62,4 +32,7 @@ function Main() {
   );
 }
 
-export default Main;
+fetch('./project-info.json')
+  .then(result => result.json())
+  .then(projects => outerSetItems(projects.map(info => ({ info, expanded: false }))))
+  .catch(error => console.error('Error fetching project info: ' + error.message));

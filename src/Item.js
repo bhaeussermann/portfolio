@@ -1,6 +1,6 @@
 import './Item.scss';
 
-function Item(props) {
+export default function Item(props) {
   return (
     <div className={'item ' + (props.expanded ? 'expanded' : 'collapsed')}>
       <div className="row">
@@ -16,5 +16,3 @@ function Item(props) {
     </div>
   );
 }
-
-export default Item;
