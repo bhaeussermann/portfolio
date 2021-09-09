@@ -6,6 +6,7 @@
     display: flex;
     border: 5px solid #99a;
     background-color: #dde;
+    transition: border-radius 0.4s ease-in-out;
     
     .app-link {
       margin: auto 0 auto 10px;
@@ -42,6 +43,18 @@
     }
   }
 
+  > .expandable-section {
+    overflow-y: hidden;
+    transition: max-height 0.4s ease-in-out;
+
+    > .description {
+      padding: 8px;
+      background-color: #e5e5f5;
+      border: solid #99a;
+      border-width: 0 2px 2px 2px;
+    }
+  }
+
   &.collapsed {
     > .row {
       border-radius: 8px;
@@ -51,6 +64,10 @@
         transform: rotate(45deg);
         -webkit-transform: rotate(45deg);
       }
+    }
+
+    > .expandable-section {
+      max-height: 0;
     }
   }
 
@@ -65,11 +82,8 @@
       }
     }
 
-    > .description {
-      padding: 8px;
-      background-color: #e5e5f5;
-      border: solid #99a;
-      border-width: 0 2px 2px 2px;
+    > .expandable-section {
+      max-height: 100px;
     }
   }
 }

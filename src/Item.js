@@ -10,7 +10,9 @@ function Item(props) {
         </a>
         <div className="expander" onClick={() => props.setExpanded(!props.expanded)}></div>
       </div>
-      {props.expanded && <div className="description">{props.info.description}</div>}
+      <div className="expandable-section">
+        <div className="description">{props.info.description}</div>
+      </div>
     </div>
   );
 }
