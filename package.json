@@ -3,14 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
+    "preact": "^10.5.14"
+  },
+  "devDependencies": {
+    "preact-cli": "^3.2.2",
+    "preact-render-to-string": "^5.1.19",
+    "sass-loader": "^10",
     "sass": "^1.39.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build"
+    "start": "preact watch",
+    "build": "preact build"
   },
   "eslintConfig": {
     "extends": [

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from 'preact/hooks';
 import './Main.scss';
 import Item from './Item';
 
@@ -32,7 +32,7 @@ export default function Main() {
   );
 }
 
-fetch('./project-info.json')
+fetch('./assets/project-info.json')
   .then(result => result.json())
   .then(projects => outerSetItems(projects.map(info => ({ info, expanded: false }))))
   .catch(error => console.error('Error fetching project info: ' + error.message));
