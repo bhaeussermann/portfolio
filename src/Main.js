@@ -1,7 +1,6 @@
 import { useState } from 'preact/hooks';
 import './Main.scss';
 import Item from './Item';
-import RepoBanner from './RepoBanner';
 
 let outerSetItems = null;
 
@@ -15,7 +14,6 @@ export default function Main() {
 
   return (
     <div id="page-content">
-      <RepoBanner />
       <header>
         <div>Bernhard H&auml;ussermann: Personal Portfolio</div>
       </header>
