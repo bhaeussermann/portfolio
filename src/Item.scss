@@ -4,7 +4,8 @@
   
   > .row {
     display: flex;
-    border: 5px solid #99a;
+    border: 5px solid;
+    border-color: #99a;
     background-color: #dde;
     transition: border-radius 0.4s ease-in-out;
     
@@ -37,7 +38,8 @@
         margin-left: 5px;
         padding: 3px;
         width: 0.1px;
-        border: solid black;
+        border: solid;
+        border-color: black;
         border-width: 0 3px 3px 0;
       }
     }
@@ -50,7 +52,8 @@
     > .description {
       padding: 8px;
       background-color: #e5e5f5;
-      border: solid #99a;
+      border: solid;
+      border-color: #99a;
       border-width: 0 2px 2px 2px;
     }
   }
@@ -84,6 +87,33 @@
 
     > .expandable-section {
       max-height: 100px;
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .item {
+    > .row {
+      border-color: #667;
+      background-color: #223;
+
+      .app-link {
+        color: #ddd;
+
+        &:visited {
+          color: #bbb;
+        }
+      }
+
+      .expander::after {
+        border-color: white;
+      }
+    }
+
+    > .expandable-section > .description {
+      background-color: #113;
+      border-color: #667;
+      color: #eee;
     }
   }
 }
