@@ -91,29 +91,27 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .item {
-    > .row {
-      border-color: #667;
-      background-color: #223;
+.dark .item {
+  > .row {
+    border-color: #667;
+    background-color: #223;
 
-      .app-link {
-        color: #ddd;
-
-        &:visited {
-          color: #bbb;
-        }
-      }
-
-      .expander::after {
-        border-color: white;
-      }
-    }
-
-    > .expandable-section > .description {
-      background-color: #113;
-      border-color: #667;
+    .app-link {
       color: #eee;
+
+      &:visited {
+        color: #bbb;
+      }
     }
+
+    .expander::after {
+      border-color: white;
+    }
+  }
+
+  > .expandable-section > .description {
+    background-color: #113;
+    border-color: #667;
+    color: #eee;
   }
 }

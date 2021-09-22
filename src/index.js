@@ -1,4 +1,4 @@
 import './index.scss';
-import Main from './Main';
+import Main from './main/main';
 
 export default Main;

@@ -1,6 +1,6 @@
-import './Item.scss';
+import './project-item.scss';
 
-export default function Item(props) {
+export default function ProjectItem(props) {
   return (
     <div className={'item ' + (props.expanded ? 'expanded' : 'collapsed')}>
       <div className="row">
