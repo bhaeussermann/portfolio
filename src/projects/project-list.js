@@ -1,11 +1,18 @@
-import { useState } from 'preact/hooks';
+import { useState, useEffect } from 'preact/hooks';
 import Item from './project-item';
-
-let outerSetState = null;
 
 export default function ProjectList() {
   const [state, setState] = useState({ items: [] });
-  outerSetState = setState;
+
+  useEffect(async () => {
+    try {
+      const result = await fetch('../assets/project-info.json');
+      const projects = await result.json();
+      setState({ items: projects.map(info => ({ info, expanded: false })) });
+    } catch (error) {
+      console.error('Error fetching project info: ' + error.message);
+    }
+  }, []);
 
   const setExpanded = (itemIndex, newExpanded) => {
     setState({
@@ -26,8 +33,3 @@ export default function ProjectList() {
     </div>
   );
 }
-
-fetch('../assets/project-info.json')
-  .then(result => result.json())
-  .then(projects => outerSetState({ items: projects.map(info => ({ info, expanded: false })) }))
-  .catch(error => console.error('Error fetching project info: ' + error.message));
