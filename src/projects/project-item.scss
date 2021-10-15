@@ -1,4 +1,4 @@
-.item {
+.project-item {
   max-width: 500px;
   margin-bottom: 10px;
   
@@ -91,7 +91,7 @@
   }
 }
 
-.dark .item {
+.dark .project-item {
   > .row {
     border-color: #667;
     background-color: #223;

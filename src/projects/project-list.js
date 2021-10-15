@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'preact/hooks';
 import Item from './project-item';
 
-export default function ProjectList() {
+export default function ProjectList(props) {
   const [state, setState] = useState({ items: [] });
 
   useEffect(async () => {
@@ -25,6 +25,7 @@ export default function ProjectList() {
       {state.items.map((item, index) =>
         <Item
           key={index}
+          darkMode={props.darkMode}
           info={item.info}
           expanded={item.expanded}
           setExpanded={newExpanded => setExpanded(index, newExpanded)}
