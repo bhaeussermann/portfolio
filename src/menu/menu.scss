@@ -13,8 +13,18 @@
   }
 
   .menu {
-    background-color: #C7C7C7;
+    background-color: #c7c7c7;
+    border: 3px solid;
+    border-radius: 8px;
+    border-color: #bbb;
     padding: 10px 10px 0 10px;
+    opacity: 1;
+    transition: opacity 0.2s;
+
+    &.menu-hidden {
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
 
     > .menu-item {
       color: black;
@@ -63,6 +73,7 @@
 
 .dark .menu {
   background-color: #383838;
+  border-color: #555;
 
   > .menu-item {
     color: white;

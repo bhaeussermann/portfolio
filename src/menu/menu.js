@@ -31,7 +31,7 @@ export default function Menu(props) {
           <img alt="Menu" />
         </picture>
       </div>
-      {state.isMenuOpen && <div class="menu">
+      {<div class={'menu' + (state.isMenuOpen ? '' : ' menu-hidden')}>
         {Object.values(DisplayModeOption).map(option => 
           (
           <div class="menu-item" onClick={() => setDisplayModeOption(option)}>
