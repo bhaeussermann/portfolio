@@ -8,6 +8,7 @@ export default function ProjectList(props) {
     try {
       const result = await fetch('../assets/project-info.json');
       const projects = await result.json();
+      projects.sort((p1, p2) => p1.title < p2.title ? -1 : 1);
       setState({ items: projects.map(info => ({ info, expanded: false })) });
     } catch (error) {
       console.error('Error fetching project info: ' + error.message);

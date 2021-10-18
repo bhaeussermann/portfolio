@@ -1,5 +1,11 @@
 [
   {
+    "title": "Personal Portfolio",
+    "description": "The very app that you're looking at right now. It is implemented using Preact so as to be quick and light-weight.",
+    "appUrl": "https://bernhard-haeussermann-portfolio.herokuapp.com",
+    "repoUrl": "https://github.com/bhaeussermann/portfolio"
+  },
+  {
     "title": "Northwind Express API",
     "description": "A RESTful API, implemented in Node.js using Express, providing CRUD functionality for managing employee details in a PostgreSQL database.",
     "appUrl": "https://northwind-express-api.herokuapp.com/swagger",
@@ -12,15 +18,32 @@
     "repoUrl": "https://github.com/bhaeussermann/AngularNorthwind"
   },
   {
-    "title": "Vue Northwind App (Buefy)",
+    "title": "Vue.js Northwind App",
     "description": "A simple CRUD application for managing employee details in a standard Northwind database. It is implemented using Vue.js and the Buefy UI component library.",
     "appUrl": "https://vue-northwind-buefy.herokuapp.com",
     "repoUrl": "https://github.com/bhaeussermann/VueNorthwind"
   },
   {
-    "title": "Vue Northwind App (Vuetify)",
-    "description": "A simple CRUD application for managing employee details in a standard Northwind database. It is implemented using Vue.js and the Vuetify UI component library.",
-    "appUrl": "https://vue-northwind-vuetify.herokuapp.com",
-    "repoUrl": "https://github.com/bhaeussermann/VueNorthwind/tree/vuetify"
+    "title": "CSS Layout Showcase",
+    "description": "A simple ExpressJS app to showcase some of the modern CSS 3 layout features.",
+    "appUrl": "https://css-layout-showcase.herokuapp.com",
+    "repoUrl": "https://github.com/bhaeussermann/css-layout-demo"
+  },
+  {
+    "title": "Visual Studio Extension: Scroll with Stationary Cursor",
+    "description": "A Visual Studio extension for having the cursor move along as you scroll in the text editor.",
+    "appUrl": "https://marketplace.visualstudio.com/items?itemName=BernhardHaeussermann.ScrollWithStationaryCursor",
+    "repoUrl": "https://github.com/bhaeussermann/ScrollWithStationaryCursor"
+  },
+  {
+    "title": "Elixir Naughts & Crosses",
+    "description": "A Naughts & Crosses (tic-tac-toe) app implemented using Elixir.",
+    "appUrl": "https://elixir-naughts-and-crosses.herokuapp.com",
+    "repoUrl": "https://github.com/bhaeussermann/elixir-naughts-and-crosses"
+  },
+  {
+    "title": "My development blog",
+    "description": "My profile on dev.to featuring some articles that I have written.",
+    "appUrl": "https://dev.to/bhaeussermann"
   }
 ]

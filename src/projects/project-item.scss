@@ -4,6 +4,7 @@
   
   > .row {
     display: flex;
+    min-height: 50px;
     border: 5px solid;
     border-color: #99a;
     background-color: #dde;
@@ -18,10 +19,13 @@
         color: #777;
       }
     }
+
+    .space {
+      margin-left: auto;
+    }
     
     .repo-link {
-      margin: 6px 10px 5px auto;
-      height: 40px;
+      margin: 6px 10px 5px 10px;
       
       img {
         height: 40px;
