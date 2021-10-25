@@ -7,11 +7,16 @@ import ProjectList from '../projects/project-list';
 const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
 export default function Main() {
-  const [state, setState] = useState({ darkMode: darkModeQuery.matches, displayModeOption: DisplayModeOption.auto });
+  function getDarkMode(displayModeOption) {
+    return (displayModeOption === DisplayModeOption.dark) || ((displayModeOption === DisplayModeOption.auto) && darkModeQuery.matches);
+  }
+
+  const savedDisplayMode = window.localStorage.getItem('displayMode') || DisplayModeOption.auto;
+  const [state, setState] = useState({ darkMode: getDarkMode(savedDisplayMode), displayModeOption: savedDisplayMode });
 
   function setDisplayModeOption(displayModeOption) {
-    const darkMode = (displayModeOption === DisplayModeOption.dark) || ((displayModeOption === DisplayModeOption.auto) && darkModeQuery.matches);
-    setState({ ...state, darkMode, displayModeOption });
+    setState({ ...state, darkMode: getDarkMode(displayModeOption), displayModeOption });
+    window.localStorage.setItem('displayMode', displayModeOption);
   }
 
   useEffect(() => {
