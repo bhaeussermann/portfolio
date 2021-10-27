@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-A Preact app that presents Bernhard Häussermann's personal portfolio.
+A Preact app (hosted [here](https://portfolio-bgh.herokuapp.com/)) that presents Bernhard Häussermann's personal portfolio.
 
 ## Available Scripts
 
