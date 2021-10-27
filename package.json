@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "express": "^4.17.1",
     "preact": "^10.5.14"
   },
   "devDependencies": {
@@ -13,7 +14,8 @@
   },
   "scripts": {
     "start": "preact watch",
-    "build": "preact build"
+    "build": "preact build --no-prerender",
+    "run": "node server.js"
   },
   "eslintConfig": {
     "extends": [
