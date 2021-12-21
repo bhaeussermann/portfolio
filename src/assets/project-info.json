@@ -2,7 +2,7 @@
   {
     "title": "Personal Portfolio",
     "description": "The very app that you're looking at right now. It is implemented using Preact so as to be quick and light-weight.",
-    "appUrl": "https://bernhard-haeussermann-portfolio.herokuapp.com",
+    "appUrl": "https://portfolio-bgh.herokuapp.com",
     "repoUrl": "https://github.com/bhaeussermann/portfolio"
   },
   {
@@ -32,7 +32,7 @@
   {
     "title": "Visual Studio Extension: Scroll with Stationary Cursor",
     "description": "A Visual Studio extension for having the cursor move along as you scroll in the text editor.",
-    "appUrl": "https://marketplace.visualstudio.com/items?itemName=BernhardHaeussermann.ScrollWithStationaryCursor",
+    "appUrl": "https://marketplace.visualstudio.com/items?itemName=BernhardHaeussermann.ScrollWithStationaryCursorVS2022",
     "repoUrl": "https://github.com/bhaeussermann/ScrollWithStationaryCursor"
   },
   {
