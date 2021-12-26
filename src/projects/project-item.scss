@@ -1,3 +1,25 @@
+:root {
+  --project-item-background-color: #dde;
+  --project-item-border-color: #99a;
+  --project-item-link-color: #333;
+  --project-item-visited-link-color: #777;
+  --project-item-expander-color: black;
+  --project-item-description-background-color: #e5e5f5;
+  --project-item-description-border-color: #99a;
+  --project-item-description-text-color: black;
+}
+
+.dark {
+  --project-item-background-color: #223;
+  --project-item-border-color: #667;
+  --project-item-link-color: #eee;
+  --project-item-visited-link-color: #bbb;
+  --project-item-expander-color: white;
+  --project-item-description-background-color: #113;
+  --project-item-description-border-color: #667;
+  --project-item-description-text-color: #eee;
+}
+
 .project-item {
   max-width: 500px;
   margin-bottom: 10px;
@@ -6,17 +28,17 @@
     display: flex;
     min-height: 50px;
     border: 5px solid;
-    border-color: #99a;
-    background-color: #dde;
+    border-color: var(--project-item-border-color);
+    background-color: var(--project-item-background-color);
     transition: border-radius 0.4s ease-in-out;
     
     .app-link {
       margin: auto 0 auto 10px;
       font-size: 1.2em;
-      color: #333;
+      color: var(--project-item-link-color);
 
       &:visited {
-        color: #777;
+        color: var(--project-item-visited-link-color);
       }
     }
 
@@ -43,7 +65,7 @@
         padding: 3px;
         width: 0.1px;
         border: solid;
-        border-color: black;
+        border-color: var(--project-item-expander-color);
         border-width: 0 3px 3px 0;
       }
     }
@@ -55,9 +77,9 @@
 
     > .description {
       padding: 8px;
-      background-color: #e5e5f5;
+      background-color: var(--project-item-description-background-color);
       border: solid;
-      border-color: #99a;
+      border-color: var(--project-item-description-border-color);
       border-width: 0 2px 2px 2px;
     }
   }
@@ -92,30 +114,5 @@
     > .expandable-section {
       max-height: 100px;
     }
-  }
-}
-
-.dark .project-item {
-  > .row {
-    border-color: #667;
-    background-color: #223;
-
-    .app-link {
-      color: #eee;
-
-      &:visited {
-        color: #bbb;
-      }
-    }
-
-    .expander::after {
-      border-color: white;
-    }
-  }
-
-  > .expandable-section > .description {
-    background-color: #113;
-    border-color: #667;
-    color: #eee;
   }
 }

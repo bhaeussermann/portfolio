@@ -1,4 +1,18 @@
+:root {
+  --main-background-color: white;
+  --main-text-color: black;
+  --main-header-color: #555;
+}
+
+.dark {
+  --main-background-color: #222;
+  --main-text-color: white;
+  --main-header-color: #bbb;
+}
+
 #page-content {
+  background: var(--main-background-color);
+  color: var(--main-text-color);
   min-height: 100vh;
   padding: 5px 50px;
 }
@@ -9,22 +23,11 @@ header {
   > div {
     font-size: 3em;
     margin: 0.67em auto;
-    color: #555;
+    color: var(--main-header-color);
   }
 }
 
 .title {
   font-size: 1.5em;
   margin: 0.5em;
-}
-
-.dark {
-  &#page-content {  
-    background-color: #222;
-    color: white;
-  }
-  
-  header > div {
-    color: #bbb;
-  }
 }

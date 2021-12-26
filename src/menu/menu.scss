@@ -1,3 +1,17 @@
+:root {
+  --menu-background-color: #c7c7c7;
+  --menu-border-color: #bbb;
+  --menu-item-text-color: black;
+  --menu-item-text-hover-color: #333;
+}
+
+.dark {
+  --menu-background-color: #383838;
+  --menu-border-color: #555;
+  --menu-item-text-color: white;
+  --menu-item-text-hover-color: #ddd;
+}
+
 .menu-container {
   position: fixed;
   right: 30px;
@@ -13,10 +27,10 @@
   }
 
   .menu {
-    background-color: #c7c7c7;
+    background-color: var(--menu-background-color);
     border: 3px solid;
     border-radius: 8px;
-    border-color: #bbb;
+    border-color: var(--menu-border-color);
     padding: 10px 10px 0 10px;
     opacity: 1;
     transition: opacity 0.2s;
@@ -27,13 +41,13 @@
     }
 
     > .menu-item {
-      color: black;
+      color: var(--menu-item-text-color);
       padding-bottom: 10px;
       min-width: 90px;
       cursor: pointer;
 
       &:hover {
-        color: #333;
+        color: var(---item-text-hover-color);
       }
 
       > .checkbox {
@@ -50,7 +64,7 @@
           top: 50%;
           height: 50%;
           width: 3px;
-          background-color: black;
+          background-color: var(--menu-item-text-color);
           transform: translateX(10px) rotate(-45deg) translateY(2px);
           transform-origin: left bottom;
         }
@@ -62,32 +76,11 @@
           bottom: 0;
           height: 3px;
           width: 100%;
-          background-color: black;
+          background-color: var(--menu-item-text-color);
           transform: translateX(10px) rotate(-45deg) translateY(2px);
           transform-origin: left bottom;
         }
       }
-    }
-  }
-}
-
-.dark .menu {
-  background-color: #383838;
-  border-color: #555;
-
-  > .menu-item {
-    color: white;
-
-    &:hover {
-      color: #ddd;
-    }
-
-    > .checkbox.checked::before {
-      background-color: white;
-    }
-
-    > .checkbox.checked::after {
-      background-color: white;
     }
   }
 }
