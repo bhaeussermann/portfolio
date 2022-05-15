@@ -12,16 +12,22 @@
     "repoUrl": "https://github.com/bhaeussermann/northwind-api"
   },
   {
-    "title": "Angular Northwind App",
+    "title": "Northwind App (Angular)",
     "description": "A simple CRUD application for managing employee details in a standard Northwind database. It is implemented using Angular and the Angular Material UI component library.",
     "appUrl": "https://angular-northwind.herokuapp.com",
     "repoUrl": "https://github.com/bhaeussermann/AngularNorthwind"
   },
   {
-    "title": "Vue.js Northwind App",
+    "title": "Northwind App (Vue.js)",
     "description": "A simple CRUD application for managing employee details in a standard Northwind database. It is implemented using Vue.js and the Buefy UI component library.",
     "appUrl": "https://vue-northwind-buefy.herokuapp.com",
     "repoUrl": "https://github.com/bhaeussermann/VueNorthwind"
+  },
+  {
+    "title": "Northwind App (Blazor)",
+    "description": "A simple CRUD application for managing employee details in a standard Northwind database. It is implemented using Blazor and the Radzen component library.",
+    "appUrl": "https://blazor-northwind.azurewebsites.net",
+    "repoUrl": "https://github.com/bhaeussermann/BlazorNorthwind"
   },
   {
     "title": "CSS Layout Showcase",
