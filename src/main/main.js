@@ -43,7 +43,9 @@ export default function Main() {
       </header>
       <main>
         <div className="title">My Personal Projects</div>
-        <ProjectList darkMode={state.darkMode} />
+        <div>
+          <ProjectList darkMode={state.darkMode} />
+        </div>
       </main>
     </div>
   );

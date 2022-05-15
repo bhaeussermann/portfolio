@@ -27,7 +27,15 @@ header {
   }
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+
+  > div {
+    margin: 0 auto 0.5em auto;
+  }
+}
+
 .title {
   font-size: 1.5em;
-  margin: 0.5em;
 }
