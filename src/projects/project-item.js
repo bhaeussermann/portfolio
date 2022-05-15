@@ -4,7 +4,7 @@ export default function ProjectItem(props) {
   return (
     <div className={'project-item ' + (props.expanded ? 'expanded' : 'collapsed')}>
       <div className="row">
-        <a className="app-link" href={props.info.appUrl} target="_blank" rel="noreferrer">{props.info.title}</a>
+        <a className="app-link external-link" href={props.info.appUrl} target="_blank" rel="noreferrer">{props.info.title}</a>
         <div className="space" />
         {(props.info.repoUrl) && (
           <a className="repo-link" href={props.info.repoUrl} target="_blank" rel="noreferrer">
