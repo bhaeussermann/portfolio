@@ -2,7 +2,7 @@ import { useState, useEffect } from 'preact/hooks';
 import { DisplayModeOption } from '../common/display-mode-option';
 import './main.scss';
 import Menu from '../menu/menu';
-import ProjectList from '../projects/project-list';
+import ProjectListController from '../projects/project-list-controller';
 
 const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
@@ -44,7 +44,7 @@ export default function Main() {
       <main>
         <div className="title">My Personal Projects</div>
         <div>
-          <ProjectList darkMode={state.darkMode} />
+          <ProjectListController darkMode={state.darkMode} />
         </div>
       </main>
     </div>

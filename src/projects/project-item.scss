@@ -1,6 +1,8 @@
 :root {
   --project-item-background-color: #dde;
   --project-item-border-color: #99a;
+  --project-item-level-2-background-color: #ccd;
+  --project-item-level-2-border-color: #778;
   --project-item-link-color: #333;
   --project-item-visited-link-color: #777;
   --project-item-expander-color: black;
@@ -12,6 +14,8 @@
 .dark {
   --project-item-background-color: #223;
   --project-item-border-color: #667;
+  --project-item-level-2-background-color: #334;
+  --project-item-level-2-border-color: #778;
   --project-item-link-color: #eee;
   --project-item-visited-link-color: #bbb;
   --project-item-expander-color: white;
@@ -28,9 +32,9 @@
     display: flex;
     align-items: center;
     min-height: 50px;
+    background-color: var(--project-item-background-color);
     border: 5px solid;
     border-color: var(--project-item-border-color);
-    background-color: var(--project-item-background-color);
     transition: border-radius 0.4s ease-in-out;
     
     .app-link {
@@ -119,5 +123,15 @@
     > .expandable-section {
       max-height: 100px;
     }
+  }
+}
+
+.project-group .project-item {
+  margin-left: 20px;
+  margin-right: 20px;
+
+  > .row {
+    background-color: var(--project-item-level-2-background-color);
+    border-color: var(--project-item-level-2-border-color);
   }
 }

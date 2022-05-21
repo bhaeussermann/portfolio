@@ -1,35 +1,25 @@
-import { useState, useEffect } from 'preact/hooks';
 import Item from './project-item';
+import ProjectGroup from './project-group';
 
 export default function ProjectList(props) {
-  const [state, setState] = useState({ items: [] });
-
-  useEffect(async () => {
-    try {
-      const result = await fetch('../assets/project-info.json');
-      const projects = await result.json();
-      projects.sort((p1, p2) => p1.title < p2.title ? -1 : 1);
-      setState({ items: projects.map(info => ({ info, expanded: false })) });
-    } catch (error) {
-      console.error('Error fetching project info: ' + error.message);
-    }
-  }, []);
-
-  const setExpanded = (itemIndex, newExpanded) => {
-    setState({
-      items: state.items.map((item, index) => ({ ...item, expanded: (index === itemIndex) && newExpanded }))
-    });
-  };
-
   return (
     <div>
-      {state.items.map((item, index) =>
-        <Item
+      {props.entries.map((entry, index) =>
+        entry.type === 'item'
+        ? <Item
           key={index}
           darkMode={props.darkMode}
-          info={item.info}
-          expanded={item.expanded}
-          setExpanded={newExpanded => setExpanded(index, newExpanded)}
+          info={entry.info}
+          expanded={entry.expanded}
+          setExpanded={newExpanded => props.setExpanded([...props.entryIndexPath, index], newExpanded)}
+          />
+        : 
+        <ProjectGroup
+          key={index}
+          darkMode={props.darkMode}
+          entryIndexPath={[...props.entryIndexPath, index]}
+          entry={entry}
+          setExpanded={props.setExpanded}
           />
         )}
     </div>

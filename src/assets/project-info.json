@@ -1,54 +1,69 @@
 [
   {
+    "type": "item",
     "title": "Personal Portfolio",
     "description": "The very app that you're looking at right now. It is implemented using Preact so as to be quick and light-weight.",
     "appUrl": "https://portfolio-bgh.herokuapp.com",
     "repoUrl": "https://github.com/bhaeussermann/portfolio"
   },
   {
-    "title": "Northwind Express API",
-    "description": "A RESTful API, implemented in Node.js using Express, providing CRUD functionality for managing employee details in a PostgreSQL database.",
-    "appUrl": "https://northwind-express-api.herokuapp.com/swagger",
-    "repoUrl": "https://github.com/bhaeussermann/northwind-api"
+    "type": "group",
+    "title": "Northwind App",
+    "entries": [
+      {
+        "type": "item",
+        "title": "API",
+        "description": "A RESTful API, implemented in Node.js using Express, providing CRUD functionality for managing employee details in a PostgreSQL database.",
+        "appUrl": "https://northwind-express-api.herokuapp.com/swagger",
+        "repoUrl": "https://github.com/bhaeussermann/northwind-api"
+      },
+      {
+        "type": "item",
+        "title": "App (Angular version)",
+        "description": "A simple CRUD application for managing employee details in a standard Northwind database. It is implemented using Angular and the Angular Material UI component library.",
+        "appUrl": "https://angular-northwind.herokuapp.com",
+        "repoUrl": "https://github.com/bhaeussermann/AngularNorthwind"
+      },
+      {
+        "type": "item",
+        "title": "App (Vue.js version)",
+        "description": "A simple CRUD application for managing employee details in a standard Northwind database. It is implemented using Vue.js and the Buefy UI component library.",
+        "appUrl": "https://vue-northwind-buefy.herokuapp.com",
+        "repoUrl": "https://github.com/bhaeussermann/VueNorthwind"
+      },
+      {
+        "type": "item",
+        "title": "App (Blazor version)",
+        "description": "A simple CRUD application for managing employee details in a standard Northwind database. It is implemented using Blazor and the Radzen component library.",
+        "appUrl": "https://blazor-northwind.azurewebsites.net",
+        "repoUrl": "https://github.com/bhaeussermann/BlazorNorthwind"
+      }
+    ]
   },
   {
-    "title": "Northwind App (Angular)",
-    "description": "A simple CRUD application for managing employee details in a standard Northwind database. It is implemented using Angular and the Angular Material UI component library.",
-    "appUrl": "https://angular-northwind.herokuapp.com",
-    "repoUrl": "https://github.com/bhaeussermann/AngularNorthwind"
-  },
-  {
-    "title": "Northwind App (Vue.js)",
-    "description": "A simple CRUD application for managing employee details in a standard Northwind database. It is implemented using Vue.js and the Buefy UI component library.",
-    "appUrl": "https://vue-northwind-buefy.herokuapp.com",
-    "repoUrl": "https://github.com/bhaeussermann/VueNorthwind"
-  },
-  {
-    "title": "Northwind App (Blazor)",
-    "description": "A simple CRUD application for managing employee details in a standard Northwind database. It is implemented using Blazor and the Radzen component library.",
-    "appUrl": "https://blazor-northwind.azurewebsites.net",
-    "repoUrl": "https://github.com/bhaeussermann/BlazorNorthwind"
-  },
-  {
+    "type": "item",
     "title": "CSS Layout Showcase",
     "description": "A simple ExpressJS app to showcase some of the modern CSS 3 layout features.",
     "appUrl": "https://css-layout-showcase.herokuapp.com",
     "repoUrl": "https://github.com/bhaeussermann/css-layout-demo"
   },
   {
+    "type": "item",
     "title": "Visual Studio Extension: Scroll with Stationary Cursor",
     "description": "A Visual Studio extension for having the cursor move along as you scroll in the text editor.",
     "appUrl": "https://marketplace.visualstudio.com/items?itemName=BernhardHaeussermann.ScrollWithStationaryCursorVS2022",
     "repoUrl": "https://github.com/bhaeussermann/ScrollWithStationaryCursor"
   },
   {
+    "type": "item",
     "title": "Elixir Naughts & Crosses",
     "description": "A Naughts & Crosses (tic-tac-toe) app implemented using Elixir.",
     "appUrl": "https://elixir-naughts-and-crosses.herokuapp.com",
     "repoUrl": "https://github.com/bhaeussermann/elixir-naughts-and-crosses"
   },
   {
-    "title": "My development blog",
+    "type": "item",
+    "title": "Development blog",
     "description": "My profile on dev.to featuring some articles that I have written.",
     "appUrl": "https://dev.to/bhaeussermann"
   }
