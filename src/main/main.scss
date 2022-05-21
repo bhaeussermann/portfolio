@@ -17,6 +17,12 @@
   padding: 5px 50px;
 }
 
+@media (max-width: 400px) {
+  #page-content {
+    padding: 5px 10px;
+  }
+}
+
 header {
   display: flex;
   
