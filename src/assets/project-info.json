@@ -33,6 +33,13 @@
       },
       {
         "type": "item",
+        "title": "App (Svelte version)",
+        "description": "A simple CRUD application for managing employee details in a standard Northwind database. It is implemented using Svelte and the Svelte Material UI component library.",
+        "appUrl": "https://svelte-northwind.herokuapp.com",
+        "repoUrl": "https://github.com/bhaeussermann/svelte-northwind"
+      },
+      {
+        "type": "item",
         "title": "App (Blazor version)",
         "description": "A simple CRUD application for managing employee details in a standard Northwind database. It is implemented using Blazor and the Radzen component library.",
         "appUrl": "https://blazor-northwind.azurewebsites.net",
