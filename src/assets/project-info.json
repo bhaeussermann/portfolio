@@ -22,14 +22,14 @@
         "title": "App (Angular version)",
         "description": "A simple CRUD application for managing employee details in a standard Northwind database. It is implemented using Angular and the Angular Material UI component library.",
         "appUrl": "https://angular-northwind.herokuapp.com",
-        "repoUrl": "https://github.com/bhaeussermann/AngularNorthwind"
+        "repoUrl": "https://github.com/bhaeussermann/angular-northwind"
       },
       {
         "type": "item",
         "title": "App (Vue.js version)",
         "description": "A simple CRUD application for managing employee details in a standard Northwind database. It is implemented using Vue.js and the Buefy UI component library.",
         "appUrl": "https://vue-northwind-buefy.herokuapp.com",
-        "repoUrl": "https://github.com/bhaeussermann/VueNorthwind"
+        "repoUrl": "https://github.com/bhaeussermann/vue-northwind"
       },
       {
         "type": "item",
@@ -43,7 +43,7 @@
         "title": "App (Blazor version)",
         "description": "A simple CRUD application for managing employee details in a standard Northwind database. It is implemented using Blazor and the Radzen component library.",
         "appUrl": "https://blazor-northwind.azurewebsites.net",
-        "repoUrl": "https://github.com/bhaeussermann/BlazorNorthwind"
+        "repoUrl": "https://github.com/bhaeussermann/blazor-northwind"
       }
     ]
   },
