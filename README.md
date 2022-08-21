@@ -1,21 +1,21 @@
 # Personal Portfolio
 
-A Preact app (hosted [here](https://portfolio-bgh.herokuapp.com/)) that presents Bernhard Häussermann's personal portfolio.
+A Svelte app (hosted [here](https://portfolio-bgh.herokuapp.com/)) that presents Bernhard Häussermann's personal portfolio.
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the root directory, you can run:
 
-### `npm start`
+### `npm run dev`
 
 Runs the app in the development mode.\
-Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
+Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
 
-The page will reload when you make edits.
+The page will update as you make edits.
 
 ### `npm run build`
 
-Builds the app for production to the *build* folder.
+Builds the app for production to the *dist* folder.
 
 ### `npm run run`
 

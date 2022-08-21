@@ -2,7 +2,7 @@
   {
     "type": "item",
     "title": "Personal Portfolio",
-    "description": "This very app right here. It is implemented using Preact so as to be quick and light-weight.",
+    "description": "This very app right here. It is implemented using Svelte.",
     "appUrl": "https://portfolio-bgh.herokuapp.com",
     "repoUrl": "https://github.com/bhaeussermann/portfolio"
   },

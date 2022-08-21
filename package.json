@@ -1,38 +1,26 @@
 {
   "name": "portfolio",
-  "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "express": "^4.17.1",
-    "preact": "^10.5.14"
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "run": "node server.js",
+    "check": "svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
-    "preact-cli": "^3.2.2",
-    "preact-render-to-string": "^5.1.19",
-    "sass-loader": "^10",
-    "sass": "^1.39.0"
+    "@sveltejs/vite-plugin-svelte": "^1.0.1",
+    "@tsconfig/svelte": "^3.0.0",
+    "sass": "^1.54.4",
+    "svelte": "^3.49.0",
+    "svelte-check": "^2.8.0",
+    "svelte-preprocess": "^4.10.7",
+    "tslib": "^2.4.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.0.7"
   },
-  "scripts": {
-    "start": "preact watch",
-    "build": "preact build --no-prerender",
-    "run": "node server.js"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "express": "^4.18.1"
   }
 }
