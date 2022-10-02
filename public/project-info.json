@@ -3,7 +3,7 @@
     "type": "item",
     "title": "Personal Portfolio",
     "description": "This very app right here. It is implemented using Svelte.",
-    "appUrl": "https://portfolio-bgh.herokuapp.com",
+    "appUrl": "https://bernhard.haus",
     "repoUrl": "https://github.com/bhaeussermann/portfolio"
   },
   {
@@ -14,28 +14,28 @@
         "type": "item",
         "title": "API",
         "description": "A RESTful API, implemented in Node.js using Express, providing CRUD functionality for managing employee details in a PostgreSQL database.",
-        "appUrl": "https://northwind-express-api.herokuapp.com/swagger",
+        "appUrl": "https://northwind-api.onrender.com/swagger",
         "repoUrl": "https://github.com/bhaeussermann/northwind-api"
       },
       {
         "type": "item",
         "title": "App (Angular version)",
         "description": "A simple CRUD application for managing employee details in a standard Northwind database. It is implemented using Angular and the Angular Material UI component library.",
-        "appUrl": "https://angular-northwind.herokuapp.com",
+        "appUrl": "https://angular-northwind.onrender.com",
         "repoUrl": "https://github.com/bhaeussermann/angular-northwind"
       },
       {
         "type": "item",
         "title": "App (Vue.js version)",
         "description": "A simple CRUD application for managing employee details in a standard Northwind database. It is implemented using Vue.js and the Buefy UI component library.",
-        "appUrl": "https://vue-northwind-buefy.herokuapp.com",
+        "appUrl": "https://vue-northwind.onrender.com",
         "repoUrl": "https://github.com/bhaeussermann/vue-northwind"
       },
       {
         "type": "item",
         "title": "App (Svelte version)",
         "description": "A simple CRUD application for managing employee details in a standard Northwind database. It is implemented using Svelte and the Svelte Material UI component library.",
-        "appUrl": "https://svelte-northwind.herokuapp.com",
+        "appUrl": "https://svelte-northwind.onrender.com",
         "repoUrl": "https://github.com/bhaeussermann/svelte-northwind"
       },
       {
@@ -51,7 +51,7 @@
     "type": "item",
     "title": "CSS Layout Showcase",
     "description": "A simple ExpressJS app to showcase some of the modern CSS 3 layout features.",
-    "appUrl": "https://css-layout-showcase.herokuapp.com",
+    "appUrl": "https://css-layout-showcase.onrender.com",
     "repoUrl": "https://github.com/bhaeussermann/css-layout-demo"
   },
   {
@@ -65,7 +65,7 @@
     "type": "item",
     "title": "Elixir Naughts & Crosses",
     "description": "A Naughts & Crosses (tic-tac-toe) app implemented using Elixir.",
-    "appUrl": "https://elixir-naughts-and-crosses.herokuapp.com",
+    "appUrl": "https://elixir-naughts-and-crosses.onrender.com",
     "repoUrl": "https://github.com/bhaeussermann/elixir-naughts-and-crosses"
   },
   {
