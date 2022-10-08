@@ -1,10 +1,14 @@
 <script lang="ts">
   import { onMount, onDestroy } from 'svelte';
+  import { Route, Router } from 'svelte-routing';
 
   import { DisplayModeOption } from './common/display-mode-option';
   import { darkMode } from './common/stores';
-  import Menu from './components/Menu.svelte';
+  import NavBar from './components/NavBar.svelte';
   import Projects from './pages/projects/Page.svelte';
+  import NotFound from './pages/NotFound.svelte';
+
+  export let url = '';
 
   const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
@@ -33,17 +37,18 @@
   }
 </script>
 
-<div class={'root ' + (darkModeValue ? 'dark' : 'light')}>
-  <aside>
-    <Menu bind:displayModeOption on:displayModeOptionChanged={_ => handleDisplayModeOptionChanged()} />
-  </aside>
-  <header>
-    <div>Bernhard H&auml;ussermann: Personal Portfolio</div>
-  </header>
-  <main>
-    <Projects />
-  </main>
-</div>
+<Router {url}>
+  <div class={'root ' + (darkModeValue ? 'dark' : 'light')}>
+    <header>
+      <NavBar bind:displayModeOption on:displayModeOptionChanged={_ => handleDisplayModeOptionChanged()} />
+    </header>
+    <main>
+      <Route path="/" component={Projects} />
+      <Route path="/projects" component={Projects} />
+      <Route component={NotFound} />
+    </main>
+  </div>
+</Router>
 
 <style lang="scss">
 .root {
@@ -53,36 +58,30 @@
 }
 
 .root.dark {
-  --main-background-color: #222;
+  --main-background-color: #1d1d1f;
   --main-text-color: white;
   --main-header-color: #bbb;
 }
 
 .root {
   background: var(--main-background-color);
-  color: var(--main-text-color);
-  min-height: 100vh;
-  padding: 5px 50px;
-}
-
-@media (max-width: 400px) {
-  .root {
-    padding: 5px 10px;
-  }
 }
 
 header {
   display: flex;
-
-  > div {
-    font-size: 3em;
-    margin: 0.67em auto;
-    color: var(--main-header-color);
-  }
 }
 
 main {
   display: flex;
   flex-direction: column;
+  color: var(--main-text-color);
+  min-height: calc(100vh - 80px);
+  padding: 5px 50px;
+}
+
+@media (max-width: 400px) {
+  main {
+    padding: 5px 10px;
+  }
 }
 </style>

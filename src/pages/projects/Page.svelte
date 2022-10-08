@@ -51,7 +51,7 @@
   }
 </script>
 
-<div class="title">My Personal Projects</div>
+<div class="title">Personal Projects</div>
 <div>
   <ProjectList
     {projectEntries}

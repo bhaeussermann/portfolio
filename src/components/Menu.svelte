@@ -62,9 +62,7 @@
 }
 
 .root {
-  position: fixed;
-  right: 30px;
-  top: 20px;
+  height: 39px;
 }
 
 .menu-button-container {
