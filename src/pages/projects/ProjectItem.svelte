@@ -13,10 +13,10 @@
 
 <div class={'root ' + (projectItem.expanded ? 'expanded' : 'collapsed')}>
   <div class="row">
-    <a class="app-link external-link" href={projectItem.info.appUrl} target="_blank" rel="noreferrer">{projectItem.info.title}</a>
+    <a class="app-link external-link" href={projectItem.info.appUrl} target="_blank" rel="noreferrer noopener">{projectItem.info.title}</a>
     <div class="space" />
     {#if projectItem.info.repoUrl}
-    <a class="repo-link" href={projectItem.info.repoUrl} target="_blank" rel="noreferrer">
+    <a class="repo-link" href={projectItem.info.repoUrl} target="_blank" rel="noreferrer noopener">
       <picture>
         <source srcset={`github-${darkModeValue ? 'dark' : 'light'}.png`} />
         <img alt="Repo on GitHub" />

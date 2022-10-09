@@ -1,10 +1,11 @@
 <script lang="ts">
   import { onMount, onDestroy } from 'svelte';
-  import { Route, Router } from 'svelte-routing';
+  import { Route, Router } from 'svelte-navigator';
 
   import { DisplayModeOption } from './common/display-mode-option';
   import { darkMode } from './common/stores';
   import NavBar from './components/NavBar.svelte';
+  import Home from './pages/home/Page.svelte';
   import Projects from './pages/projects/Page.svelte';
   import NotFound from './pages/NotFound.svelte';
 
@@ -43,7 +44,7 @@
       <NavBar bind:displayModeOption on:displayModeOptionChanged={_ => handleDisplayModeOptionChanged()} />
     </header>
     <main>
-      <Route path="/" component={Projects} />
+      <Route path="/" component={Home} />
       <Route path="/projects" component={Projects} />
       <Route component={NotFound} />
     </main>

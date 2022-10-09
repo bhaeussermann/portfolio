@@ -26,6 +26,7 @@
     if (displayModeOption !== newDisplayModeOption) {
       displayModeOption = newDisplayModeOption;
       eventDispatcher('displayModeOptionChanged', displayModeOption);
+      isMenuOpen = false;
     }
   }
 </script>
