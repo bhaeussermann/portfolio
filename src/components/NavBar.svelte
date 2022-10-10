@@ -23,7 +23,7 @@
   onDestroy(() => unsubscribeLocationChange());
 </script>
 
-<div class="root">
+<div id="root">
   <nav class="menu-bar pure-menu">
     <span class="pure-menu-heading">Bernhard — Portfolio</span>
     <ul class="menu-item-list pure-menu-list">
@@ -38,19 +38,19 @@
 </div>
 
 <style lang="scss">
-.root {
+#root {
   --menubar-background-color: #f0f0f0;
   --menuitem-border-color: #ccc;
   --menuitem-hover-background-color: #e0e0e0;
 }
 
-:global(.dark) .root {
+:global(.dark) #root {
   --menubar-background-color: #181818;
   --menuitem-border-color: #333;
   --menuitem-hover-background-color: #202020;
 }
 
-.root {
+#root {
   height: 70px;
   z-index: 1;
 }

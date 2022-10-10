@@ -7,7 +7,7 @@
   export let setExpanded: (entryIndexPath: number[], expanded: boolean) => void;
 </script>
 
-<div class={'root project-group ' + (projectGroup.expanded ? 'expanded' : 'collapsed')}>
+<div id="root" class="project-group {projectGroup.expanded ? 'expanded' : 'collapsed'}">
   <div class="row" on:click={() => setExpanded(entryIndexPath, !projectGroup.expanded)}>
     <div class="group-title">{projectGroup.title}</div>
      <div class="space" />
@@ -23,14 +23,14 @@
 </div>
 
 <style lang="scss">
-.root {
+#root {
   --group-item-background-color: #dde;
   --group-item-border-color: #99a;
   --group-item-title-color: #333;
   --group-item-expander-color: black;
 }
 
-:global(.dark) .root {
+:global(.dark) #root {
   --group-item-background-color: #223;
   --group-item-border-color: #667;
   --group-item-title-color: #eee;
@@ -38,7 +38,7 @@
   --group-item-expander-color: white;
 }
 
-.root {
+#root {
   max-width: 500px;
 }
 

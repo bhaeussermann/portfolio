@@ -11,7 +11,7 @@
   darkMode.subscribe(value => darkModeValue = value);
 </script>
 
-<div class={'root ' + (projectItem.expanded ? 'expanded' : 'collapsed')}>
+<div id="root" class={projectItem.expanded ? 'expanded' : 'collapsed'}>
   <div class="row">
     <a class="app-link external-link" href={projectItem.info.appUrl} target="_blank" rel="noreferrer noopener">{projectItem.info.title}</a>
     <div class="space" />
@@ -31,7 +31,7 @@
 </div>
 
 <style lang="scss">
-.root {
+#root {
   --project-item-background-color: #dde;
   --project-item-border-color: #99a;
   --project-item-level-2-background-color: #ccd;
@@ -44,7 +44,7 @@
   --project-item-description-text-color: black;
 }
 
-:global(.dark) .root {
+:global(.dark) #root {
   --project-item-background-color: #223;
   --project-item-border-color: #667;
   --project-item-level-2-background-color: #334;
@@ -57,7 +57,7 @@
   --project-item-description-text-color: #eee;
 }
 
-.root {
+#root {
   max-width: 500px;
   margin-bottom: 10px;
 }

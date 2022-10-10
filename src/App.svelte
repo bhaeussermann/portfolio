@@ -39,7 +39,7 @@
 </script>
 
 <Router {url}>
-  <div class={'root ' + (darkModeValue ? 'dark' : 'light')}>
+  <div id="root" class={darkModeValue ? 'dark' : 'light'}>
     <header>
       <NavBar bind:displayModeOption on:displayModeOptionChanged={_ => handleDisplayModeOptionChanged()} />
     </header>
@@ -52,19 +52,19 @@
 </Router>
 
 <style lang="scss">
-.root {
+#root {
   --main-background-color: white;
   --main-text-color: black;
   --main-header-color: #555;
 }
 
-.root.dark {
+#root.dark {
   --main-background-color: #1d1d1f;
   --main-text-color: white;
   --main-header-color: #bbb;
 }
 
-.root {
+#root {
   background: var(--main-background-color);
 }
 
@@ -77,7 +77,13 @@ main {
   flex-direction: column;
   color: var(--main-text-color);
   min-height: calc(100vh - 80px);
-  padding: 5px 50px;
+  padding: 5px 100px;
+}
+
+@media (max-width: 800px) {
+  main {
+    padding: 5px 50px;
+  }
 }
 
 @media (max-width: 400px) {

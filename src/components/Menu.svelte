@@ -31,7 +31,7 @@
   }
 </script>
 
-<div class="root" bind:this={rootElement}>
+<div id="root" bind:this={rootElement}>
   <div class="menu-button-container">
     <picture class="menu-button" on:click={() => isMenuOpen = !isMenuOpen}>
       <source srcset={`menu-${darkModeValue ? 'dark' : 'light'}.png`} />
@@ -48,21 +48,21 @@
 </div>
 
 <style lang="scss">
-.root {
+#root {
   --menu-background-color: #c7c7c7;
   --menu-border-color: #bbb;
   --menu-item-text-color: black;
   --menu-item-text-hover-color: #333;
 }
 
-:global(.dark) .root {
+:global(.dark) #root {
   --menu-background-color: #383838;
   --menu-border-color: #555;
   --menu-item-text-color: white;
   --menu-item-text-hover-color: #ddd;
 }
 
-.root {
+#root {
   height: 39px;
 }
 
