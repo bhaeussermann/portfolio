@@ -21,6 +21,13 @@ darkMode.subscribe(value => darkModeValue = value);
           target="_blank"
           rel="nofollow noreferrer noopener">Pretoria, South Africa</a></li>
         <li>✉️ <a href="mailto:bernhardgh@icloud.com">bernhardgh@icloud.com</a></li>
+        <li style="display: flex">
+          <picture>
+            <source srcset="download-{darkModeValue ? 'dark' : 'light'}.png" />
+            <img alt="CV Download" />
+          </picture>
+          <a style="margin-left: 5px;" href="cv.pdf" target="_blank">Download my CV</a>
+        </li>
       </ul>
       <div id="profiles-section">
         <a
@@ -29,7 +36,7 @@ darkMode.subscribe(value => darkModeValue = value);
           rel="noreferrer noopener"
           title="GitHub profile">
           <picture>
-            <source srcset={`github-${darkModeValue ? 'dark' : 'light'}.png`} />
+            <source srcset="github-{darkModeValue ? 'dark' : 'light'}.png" />
             <img alt="GitHub profile" />
           </picture>
         </a>
@@ -86,7 +93,7 @@ darkMode.subscribe(value => darkModeValue = value);
 
   > #profile {
     width: 250px;
-    height: auto;
+    height: 250px;
     border-radius: 50%;
   }
 }

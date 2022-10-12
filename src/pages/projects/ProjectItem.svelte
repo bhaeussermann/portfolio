@@ -18,7 +18,7 @@
     {#if projectItem.info.repoUrl}
     <a class="repo-link" href={projectItem.info.repoUrl} target="_blank" rel="noreferrer noopener">
       <picture>
-        <source srcset={`github-${darkModeValue ? 'dark' : 'light'}.png`} />
+        <source srcset="github-{darkModeValue ? 'dark' : 'light'}.png" />
         <img alt="Repo on GitHub" />
       </picture>
     </a>
@@ -159,7 +159,7 @@
   }
 }
 
-:global(.project-group) .root {
+:global(.project-group) #root {
   margin-left: 20px;
   margin-right: 20px;
 
