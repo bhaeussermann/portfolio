@@ -10,7 +10,8 @@
 
   const menuItems = [
     { path: '/', title: 'Home' },
-    { path: '/projects', title: 'Projects' }
+    { path: '/projects', title: 'Projects' },
+    { path: '/blog', title: 'Blog' }
   ];
 
   let currentPath = globalHistory.location.pathname;

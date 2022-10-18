@@ -26,7 +26,7 @@ darkMode.subscribe(value => darkModeValue = value);
             <source srcset="download-{darkModeValue ? 'dark' : 'light'}.png" />
             <img alt="CV Download" />
           </picture>
-          <a style="margin-left: 5px;" href="cv.pdf" target="_blank">Download my CV</a>
+          <a style="margin-left: 5px;" href="cv.pdf" target="_blank">Résumé</a>
         </li>
       </ul>
       <div id="profiles-section">
@@ -69,16 +69,6 @@ darkMode.subscribe(value => darkModeValue = value);
 
 <style lang="scss">
 #root {
-  --link-color: #777;
-  --visited-link-color: #aaa;
-}
-
-:global(.dark) #root {
-  --link-color: #bbb;
-  --visited-link-color: #888;
-}
-
-#root {
   display: flex;
   flex-direction: column;
 }
@@ -95,24 +85,6 @@ darkMode.subscribe(value => darkModeValue = value);
     width: 250px;
     height: 250px;
     border-radius: 50%;
-  }
-}
-
-ul {
-  list-style-type: none;
-  padding-left: 0;
-
-  > li {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-
-    a {
-      color: var(--link-color);
-
-      &:visited {
-        color: var(--visited-link-color);
-      }
-    }
   }
 }
 

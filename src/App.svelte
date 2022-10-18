@@ -1,4 +1,5 @@
 <script lang="ts">
+  import './app.scss';
   import { onMount, onDestroy } from 'svelte';
   import { Route, Router } from 'svelte-navigator';
 
@@ -7,6 +8,7 @@
   import NavBar from './components/NavBar.svelte';
   import Home from './pages/home/Page.svelte';
   import Projects from './pages/projects/Page.svelte';
+  import Blog from './pages/blog/Page.svelte';
   import NotFound from './pages/NotFound.svelte';
 
   export let url = '';
@@ -46,6 +48,7 @@
     <main>
       <Route path="/" component={Home} />
       <Route path="/projects" component={Projects} />
+      <Route path="/blog" component={Blog} />
       <Route component={NotFound} />
     </main>
   </div>

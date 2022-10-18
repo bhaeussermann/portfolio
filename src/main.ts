@@ -1,4 +1,3 @@
-import './app.css';
 import 'purecss/build/base-min.css';
 import 'purecss/build/menus-min.css';
 import App from './App.svelte';

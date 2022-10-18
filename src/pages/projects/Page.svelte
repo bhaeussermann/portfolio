@@ -54,26 +54,24 @@
   }
 </script>
 
-<h1 use:registerFocus>Personal Projects</h1>
-<div class="disclosure">
-  Below is a list of some small projects I've been working on in my spare time.<br />
-  Note that while the projects below are implemented in a number of different (predominantly web-related) technologies, most of my working experience
-  (at my employer) is in .NET / C#.
-</div>
-<div>
-  <ProjectList
-    {projectEntries}
-    entryIndexPath={[]}
-    {setExpanded}
-    />
+<div id="root">
+  <h1 use:registerFocus>Personal Projects</h1>
+  <div class="paragraph">
+    Below is a list of some small projects I've been working on in my spare time.<br />
+    Note that while the projects below are implemented in a number of different (predominantly web-related) technologies, most of my working experience
+    (at my employer) is in .NET / C#.
+  </div>
+  <div>
+    <ProjectList
+      {projectEntries}
+      entryIndexPath={[]}
+      {setExpanded}
+      />
+  </div>
 </div>
 
 <style lang="scss">
 div {
   margin: 0 auto 1em auto;
-}
-
-.disclosure {
-  font-size: 1.2em;
 }
 </style>
