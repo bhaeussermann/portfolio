@@ -99,4 +99,22 @@ darkMode.subscribe(value => darkModeValue = value);
     display: none;
   }
 }
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+
+  > li {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+
+    a {
+      color: var(--link-color);
+
+      &:visited {
+        color: var(--visited-link-color);
+      }
+    }
+  }
+}
 </style>
