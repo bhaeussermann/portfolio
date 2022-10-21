@@ -52,7 +52,7 @@
 }
 
 #root {
-  height: 70px;
+  height: 59px;
   z-index: 1;
 }
 

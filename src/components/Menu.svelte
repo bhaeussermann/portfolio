@@ -81,12 +81,14 @@
   border-radius: 8px;
   border-color: var(--menu-border-color);
   padding: 10px 10px 0 10px;
+  visibility: visible;
   opacity: 1;
-  transition: opacity 0.2s;
+  transition: visibility 0s, opacity 0.2s;
 
   &.menu-hidden {
+    visibility: hidden;
     opacity: 0;
-    transition: opacity 0.5s;
+    transition: visibility 0.5s, opacity 0.5s;
   }
 
   > .menu-item {
