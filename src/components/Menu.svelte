@@ -98,7 +98,7 @@
     cursor: pointer;
 
     &:hover {
-      color: var(---item-text-hover-color);
+      color: var(--menu-item-text-hover-color);
     }
 
     > .checkbox {

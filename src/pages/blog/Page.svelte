@@ -7,7 +7,8 @@
 
   const registerFocus = useFocus();
 
-  let articles: Article[] = [];
+  let articles: Article[];
+  let isLoadingArticles = true;
   let didLoadingFail = false;
 
   onMount(async function() {
@@ -19,6 +20,9 @@
       console.error('Error loading articles: ' + error.message);
       didLoadingFail = true;
     }
+    finally {
+      isLoadingArticles = false;
+    }
   });
 </script>
 
@@ -28,6 +32,14 @@
   <div class="error">Failed loading articles.</div>
   {:else}
   <div class="paragraph">Here's a list of my most recent articles on dev.to.</div>
+  {#if isLoadingArticles}
+  <div class="skeleton">
+    <div class="line" />
+    <div class="line" />
+    <div class="line" />
+    <div class="line" />
+  </div>
+  {:else}
   <div>
     {#each articles as article}
       <div class="row">
@@ -37,14 +49,10 @@
     {/each}
   </div>
   {/if}
+  {/if}
 </div>
 
 <style lang="scss">
-.error {
-  font-size: 1.2em;
-  color: #ff4444;
-}
-
 .row {
   margin: 0 auto 10px auto;
 
