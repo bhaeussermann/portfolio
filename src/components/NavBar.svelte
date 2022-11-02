@@ -34,7 +34,9 @@
       </li>
       {/each}
     </ul>
-    <Menu bind:displayModeOption on:displayModeOptionChanged />
+    <div id="option-menu">
+      <Menu bind:displayModeOption on:displayModeOptionChanged />
+    </div>
   </nav>
 </div>
 
@@ -59,6 +61,7 @@
 .menu-bar {
   position: fixed;
   display: flex;
+  flex-wrap: wrap;
   background-color: var(--menubar-background-color);
   width: 100%;
   padding: 10px 20px;
@@ -71,7 +74,6 @@
   > .menu-item-list {
     flex: 1;
     display: flex;
-    flex-direction: row;
 
     > .menu-item {
       border: 0.15rem solid transparent;
@@ -86,6 +88,18 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 650px) {
+  #option-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 510px) {
+  #root {
+    height: 94px;
   }
 }
 </style>

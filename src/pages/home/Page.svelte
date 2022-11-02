@@ -91,10 +91,11 @@ darkMode.subscribe(value => darkModeValue = value);
 #profiles-section {
   margin-top: 50px;
   display: flex;
+  flex-wrap: wrap;
   gap: 40px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   #profile {
     display: none;
   }

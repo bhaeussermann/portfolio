@@ -67,11 +67,5 @@
     "description": "A Naughts & Crosses (tic-tac-toe) app implemented using Elixir.",
     "appUrl": "https://elixir-naughts-and-crosses.onrender.com",
     "repoUrl": "https://github.com/bhaeussermann/elixir-naughts-and-crosses"
-  },
-  {
-    "type": "item",
-    "title": "Development blog",
-    "description": "My profile on dev.to featuring some articles that I have written.",
-    "appUrl": "https://dev.to/bhaeussermann"
   }
 ]

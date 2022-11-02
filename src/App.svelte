@@ -93,7 +93,7 @@
 header {
   display: flex;
   
-  #github-ribbon {
+  > #github-ribbon {
     position: fixed;
     top: 59px;
     right: 0;
@@ -117,6 +117,12 @@ main {
 @media (max-width: 400px) {
   main {
     padding: 5px 10px;
+  }
+}
+
+@media (max-width: 510px) {
+  header > #github-ribbon {
+    top: 94px;
   }
 }
 </style>
