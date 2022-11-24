@@ -14,11 +14,11 @@
     <div class="expander" />
   </div>
   <div class="expandable-section">
+    <div class="description">{projectGroup.description}</div>
     <ProjectList
       projectEntries={projectGroup.entries}
       {entryIndexPath}
-      {setExpanded}
-      />
+      {setExpanded} />
   </div>
 </div>
 
@@ -28,6 +28,9 @@
   --group-item-border-color: #99a;
   --group-item-title-color: #333;
   --group-item-expander-color: black;
+  --item-description-background-color: #e5e5f5;
+  --item-description-border-color: #99a;
+  --item-description-text-color: black;
 }
 
 :global(.dark) #root {
@@ -36,20 +39,23 @@
   --group-item-title-color: #eee;
   --group-item-visited-link-color: #bbb;
   --group-item-expander-color: white;
+  --item-description-background-color: #113;
+  --item-description-border-color: #667;
+  --item-description-text-color: #eee;
 }
 
 #root {
   max-width: 500px;
+  transition: margin-bottom 0.4s ease-in-out;
 }
 
 .row {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
   min-height: 50px;
   border: 5px solid;
-  border-radius: 8px;
   border-color: var(--group-item-border-color);
+  transition: border-radius 0.4s ease-in-out;
   background-color: var(--group-item-background-color);
   cursor: pointer;
   
@@ -85,12 +91,29 @@
 .expandable-section {
   overflow-y: hidden;
   transition: max-height 0.4s ease-in-out;
+
+  > .description {
+    margin-bottom: 10px;
+    padding: 8px;
+    background-color: var(--item-description-background-color);
+    border: solid;
+    border-color: var(--item-description-border-color);
+    border-width: 0 2px 2px 2px;
+  }
 }
 
 .collapsed {
-  > .row .expander::after {
-    transform: translateY(-4px) rotate(45deg);
-    -webkit-transform: translateY(-4px) rotate(45deg);
+  &#root {
+    margin-bottom: 10px;
+  }
+
+  > .row {
+    border-radius: 8px;
+  
+    > .expander::after {
+      transform: translateY(-4px) rotate(45deg);
+      -webkit-transform: translateY(-4px) rotate(45deg);
+    }
   }
 
   > .expandable-section {
@@ -99,13 +122,17 @@
 }
 
 .expanded {
-  > .row .expander::after {
-    transform: translateY(0) rotate(-135deg);
-    -webkit-transform: translateY(0) rotate(-135deg);
+  > .row {
+    border-radius: 8px 8px 0 0;
+
+    .expander::after {
+      transform: translateY(0) rotate(-135deg);
+      -webkit-transform: translateY(0) rotate(-135deg);
+    }
   }
 
   > .expandable-section {
-    max-height: 500px;
+    max-height: 800px;
   }
 }
 </style>

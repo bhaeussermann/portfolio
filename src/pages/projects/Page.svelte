@@ -36,6 +36,7 @@
             type: 'group',
             expanded: false,
             title: entry.title,
+            description: entry.description,
             entries: mapEntries(entry.entries)
           };
       });

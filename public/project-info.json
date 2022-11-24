@@ -9,6 +9,7 @@
   {
     "type": "group",
     "title": "Northwind App",
+    "description": "An application for managing employee details. I built the same application using a number of different Javascript frameworks. They all consume the same API implemented in Node.js.",
     "entries": [
       {
         "type": "item",

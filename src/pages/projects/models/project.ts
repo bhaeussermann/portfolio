@@ -13,6 +13,7 @@ export interface ProjectItem extends ProjectEntryBase {
 export interface ProjectGroup extends ProjectEntryBase {
   type: 'group';
   title: string;
+  description: string;
   entries: ProjectEntry[];
 }
 
