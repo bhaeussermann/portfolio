@@ -1,4 +1,5 @@
 <script lang="ts">
+  import ProjectDescription from './ProjectDescription.svelte';
   import ProjectList from './ProjectList.svelte';
   import type { ProjectGroup } from './models/project';
 
@@ -14,7 +15,8 @@
     <div class="expander" />
   </div>
   <div class="expandable-section">
-    <div class="description">{projectGroup.description}</div>
+    <ProjectDescription description={projectGroup.description}></ProjectDescription>
+    <div class="gap" />
     <ProjectList
       projectEntries={projectGroup.entries}
       {entryIndexPath}
@@ -28,9 +30,6 @@
   --group-item-border-color: #99a;
   --group-item-title-color: #333;
   --group-item-expander-color: black;
-  --item-description-background-color: #e5e5f5;
-  --item-description-border-color: #99a;
-  --item-description-text-color: black;
 }
 
 :global(.dark) #root {
@@ -39,9 +38,6 @@
   --group-item-title-color: #eee;
   --group-item-visited-link-color: #bbb;
   --group-item-expander-color: white;
-  --item-description-background-color: #113;
-  --item-description-border-color: #667;
-  --item-description-text-color: #eee;
 }
 
 #root {
@@ -92,13 +88,8 @@
   overflow-y: hidden;
   transition: max-height 0.4s ease-in-out;
 
-  > .description {
-    margin-bottom: 10px;
-    padding: 8px;
-    background-color: var(--item-description-background-color);
-    border: solid;
-    border-color: var(--item-description-border-color);
-    border-width: 0 2px 2px 2px;
+  > .gap {
+    height: 10px;
   }
 }
 

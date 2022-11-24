@@ -2,6 +2,7 @@
   import '../../rows.scss';
 
   import { darkMode } from '../../common/stores';
+  import ProjectDescription from './ProjectDescription.svelte';
   import type { ProjectItem } from './models/project';
 
   export let projectItem: ProjectItem;
@@ -28,7 +29,7 @@
     <div class="expander" on:click={() => setExpanded(entryIndexPath, !projectItem.expanded)} />
   </div>
   <div class="expandable-section">
-    <div class="description">{projectItem.info.description}</div>
+    <ProjectDescription description={projectItem.info.description}></ProjectDescription>
   </div>
 </div>
 
@@ -37,18 +38,12 @@
   --item-level-2-background-color: #ccd;
   --item-level-2-border-color: #778;
   --item-expander-color: black;
-  --item-description-background-color: #e5e5f5;
-  --item-description-border-color: #99a;
-  --item-description-text-color: black;
 }
 
 :global(.dark) #root {
   --item-level-2-background-color: #334;
   --item-level-2-border-color: #778;
   --item-expander-color: white;
-  --item-description-background-color: #113;
-  --item-description-border-color: #667;
-  --item-description-text-color: #eee;
 }
 
 #root {
@@ -101,14 +96,6 @@
 .expandable-section {
   overflow-y: hidden;
   transition: max-height 0.4s ease-in-out;
-
-  > .description {
-    padding: 8px;
-    background-color: var(--item-description-background-color);
-    border: solid;
-    border-color: var(--item-description-border-color);
-    border-width: 0 2px 2px 2px;
-  }
 }
 
 .collapsed {
