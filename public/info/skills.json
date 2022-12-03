@@ -1,0 +1,48 @@
+[
+  {
+    "name": "C#",
+    "githubQuery": "&language=c%23"
+  },
+  {
+    "name": "Javascript",
+    "githubQuery": "&language=javascript"
+  },
+  {
+    "name": "Typescript",
+    "githubQuery": "&language=typescript"
+  },
+  {
+    "name": "Java",
+    "githubQuery": "&language=java"
+  },
+  {
+    "name": "CSS"
+  },
+  {
+    "name": "HTML"
+  },
+  {
+    "name": "PostgreSQL",
+    "githubQuery": "&q=postgresql"
+  },
+  {
+    "name": "Node.js",
+    "githubQuery": "&q=nodejs"
+  },
+  {
+    "name": "Svelte",
+    "githubQuery": "&q=sveltejs"
+  },
+  {
+    "name": "Blazor",
+    "githubQuery": "&q=blazor"
+  },
+  {
+    "name": "Angular",
+    "githubQuery": "&q=angular"
+  },
+  {
+    "name": "Vue.js",
+    "githubQuery": "&q=vuejs"
+  }
+]

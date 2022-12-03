@@ -1,6 +1,7 @@
 <script lang="ts">
 import { useFocus } from 'svelte-navigator';
 import { darkMode } from '../../common/stores';
+import Skills from './Skills.svelte';
 
 const registerFocus = useFocus();
 
@@ -62,6 +63,7 @@ darkMode.subscribe(value => darkModeValue = value);
           <img src="youtube.png" alt="My piano videos on YouTube" />
         </a>
       </div>
+      <Skills />
     </div>
     <img id="profile" src="profile.jpg" alt="Profile">
   </div>

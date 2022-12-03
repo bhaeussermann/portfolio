@@ -12,7 +12,7 @@
 
   onMount(async function() {
     try {
-      const result = await fetch('./project-info.json');
+      const result = await fetch('./info/projects.json');
       projectEntries = mapEntries(await result.json());
     } catch (error) {
       console.error('Error fetching project info: ' + error.message);
@@ -63,7 +63,7 @@
 <div id="root">
   <h1 use:registerFocus>Personal Projects</h1>
   {#if didLoadingFail}
-  <div class="error">Failed loading articles.</div>
+  <div class="error">Failed loading projects.</div>
   {:else}
   <div class="paragraph">
     Below is a list of some small projects I've been working on in my spare time.<br />
