@@ -1,12 +1,5 @@
 [
   {
-    "type": "item",
-    "title": "Personal Portfolio",
-    "description": "This very app right here. It is implemented in Svelte.",
-    "appUrl": "https://bernhard.haus",
-    "repoUrl": "https://github.com/bhaeussermann/portfolio"
-  },
-  {
     "type": "group",
     "title": "Northwind App",
     "description": "An application for managing employee details. I built the same application using a number of different Javascript frameworks. They all consume the same API implemented in Node.js.",
@@ -60,7 +53,7 @@
     "title": "Visual Studio Extension: Scroll with Stationary Cursor",
     "description": "A Visual Studio extension for having the cursor move along as you scroll in the text editor.",
     "appUrl": "https://marketplace.visualstudio.com/items?itemName=BernhardHaeussermann.ScrollWithStationaryCursorVS2022",
-    "repoUrl": "https://github.com/bhaeussermann/ScrollWithStationaryCursor"
+    "repoUrl": "https://github.com/bhaeussermann/scroll-with-stationary-cursor"
   },
   {
     "type": "item",
@@ -75,5 +68,12 @@
     "description": "A simple application implemented in Svelte for adding up hour-minute durations for filling in time sheets.",
     "appUrl": "https://duration-adder.onrender.com",
     "repoUrl": "https://github.com/bhaeussermann/duration-adder"
+  },
+  {
+    "type": "item",
+    "title": "Weak Dictionary",
+    "description": "A .NET implementation of a dictionary that has weak references to its values. The dictionary automatically removes entries from itself as and when values get garbage collected.",
+    "appUrl": "https://www.nuget.org/packages/BernhardHaus.Collections.WeakDictionary",
+    "repoUrl": "https://github.com/bhaeussermann/weak-dictionary"
   }
 ]
